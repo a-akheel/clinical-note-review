@@ -1,0 +1,10 @@
+.venv
+.env
+data
+.git
+__pycache__
+.pytest_cache
+docs
+tests
+
+.local-password

@@ -1,0 +1,14 @@
+services:
+  app:
+    build: .
+    ports:
+      - "127.0.0.1:8765:8765"
+    environment:
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_MODEL: ${OPENAI_MODEL:-}
+      INPUT_USD_PER_MILLION: ${INPUT_USD_PER_MILLION:-}
+      OUTPUT_USD_PER_MILLION: ${OUTPUT_USD_PER_MILLION:-}
+    volumes:
+      - notes:/app/data
+volumes:
+  notes:

@@ -1,0 +1,13 @@
+.venv/
+.env
+__pycache__/
+.pytest_cache/
+data/
+*.db
+*.db-shm
+*.db-wal
+node_modules/
+evaluations/latest.json
+docs/*-test.png
+
+.local-password

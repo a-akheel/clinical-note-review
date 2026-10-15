@@ -1,0 +1,602 @@
+[
+  {
+    "id": "case-01",
+    "category": "Negation",
+    "title": "Denied fever",
+    "transcript": "Clinician: Have you had fever?\nPatient: I have not had fever.",
+    "checks": [
+      {
+        "section": "subjective",
+        "contains": "not had fever",
+        "expected": true
+      },
+      {
+        "section": "subjective",
+        "contains": "Have you had fever?",
+        "expected": false
+      }
+    ]
+  },
+  {
+    "id": "case-02",
+    "category": "Negation",
+    "title": "Denied chest pain",
+    "transcript": "Clinician: Have you had chest pain?\nPatient: I have not had chest pain.",
+    "checks": [
+      {
+        "section": "subjective",
+        "contains": "not had chest pain",
+        "expected": true
+      },
+      {
+        "section": "subjective",
+        "contains": "Have you had chest pain?",
+        "expected": false
+      }
+    ]
+  },
+  {
+    "id": "case-03",
+    "category": "Negation",
+    "title": "Denied nausea",
+    "transcript": "Clinician: Have you had nausea?\nPatient: I have not had nausea.",
+    "checks": [
+      {
+        "section": "subjective",
+        "contains": "not had nausea",
+        "expected": true
+      },
+      {
+        "section": "subjective",
+        "contains": "Have you had nausea?",
+        "expected": false
+      }
+    ]
+  },
+  {
+    "id": "case-04",
+    "category": "Negation",
+    "title": "Denied dizziness",
+    "transcript": "Clinician: Have you had dizziness?\nPatient: I have not had dizziness.",
+    "checks": [
+      {
+        "section": "subjective",
+        "contains": "not had dizziness",
+        "expected": true
+      },
+      {
+        "section": "subjective",
+        "contains": "Have you had dizziness?",
+        "expected": false
+      }
+    ]
+  },
+  {
+    "id": "case-05",
+    "category": "Negation",
+    "title": "Denied shortness of breath",
+    "transcript": "Clinician: Have you had shortness of breath?\nPatient: I have not had shortness of breath.",
+    "checks": [
+      {
+        "section": "subjective",
+        "contains": "not had shortness of breath",
+        "expected": true
+      },
+      {
+        "section": "subjective",
+        "contains": "Have you had shortness of breath?",
+        "expected": false
+      }
+    ]
+  },
+  {
+    "id": "case-06",
+    "category": "Attribution",
+    "title": "Mother history",
+    "transcript": "Clinician: Tell me about your family history.\nPatient: My mother has asthma. I do not have that diagnosis.",
+    "checks": [
+      {
+        "section": "subjective",
+        "contains": "My mother has asthma",
+        "expected": true
+      },
+      {
+        "section": "subjective",
+        "contains": "I do not have that diagnosis",
+        "expected": true
+      },
+      {
+        "section": "assessment",
+        "contains": "asthma",
+        "expected": false
+      }
+    ]
+  },
+  {
+    "id": "case-07",
+    "category": "Attribution",
+    "title": "Father history",
+    "transcript": "Clinician: Tell me about your family history.\nPatient: My father has diabetes. I do not have that diagnosis.",
+    "checks": [
+      {
+        "section": "subjective",
+        "contains": "My father has diabetes",
+        "expected": true
+      },
+      {
+        "section": "subjective",
+        "contains": "I do not have that diagnosis",
+        "expected": true
+      },
+      {
+        "section": "assessment",
+        "contains": "diabetes",
+        "expected": false
+      }
+    ]
+  },
+  {
+    "id": "case-08",
+    "category": "Attribution",
+    "title": "Sister history",
+    "transcript": "Clinician: Tell me about your family history.\nPatient: My sister has migraine. I do not have that diagnosis.",
+    "checks": [
+      {
+        "section": "subjective",
+        "contains": "My sister has migraine",
+        "expected": true
+      },
+      {
+        "section": "subjective",
+        "contains": "I do not have that diagnosis",
+        "expected": true
+      },
+      {
+        "section": "assessment",
+        "contains": "migraine",
+        "expected": false
+      }
+    ]
+  },
+  {
+    "id": "case-09",
+    "category": "Attribution",
+    "title": "Brother history",
+    "transcript": "Clinician: Tell me about your family history.\nPatient: My brother has eczema. I do not have that diagnosis.",
+    "checks": [
+      {
+        "section": "subjective",
+        "contains": "My brother has eczema",
+        "expected": true
+      },
+      {
+        "section": "subjective",
+        "contains": "I do not have that diagnosis",
+        "expected": true
+      },
+      {
+        "section": "assessment",
+        "contains": "eczema",
+        "expected": false
+      }
+    ]
+  },
+  {
+    "id": "case-10",
+    "category": "Attribution",
+    "title": "Grandmother history",
+    "transcript": "Clinician: Tell me about your family history.\nPatient: My grandmother has arthritis. I do not have that diagnosis.",
+    "checks": [
+      {
+        "section": "subjective",
+        "contains": "My grandmother has arthritis",
+        "expected": true
+      },
+      {
+        "section": "subjective",
+        "contains": "I do not have that diagnosis",
+        "expected": true
+      },
+      {
+        "section": "assessment",
+        "contains": "arthritis",
+        "expected": false
+      }
+    ]
+  },
+  {
+    "id": "case-11",
+    "category": "Section routing",
+    "title": "Temperature is 37 c",
+    "transcript": "Patient: I came for a routine visit.\nClinician: Vitals: temperature is 37 C.",
+    "checks": [
+      {
+        "section": "objective",
+        "contains": "temperature is 37 C",
+        "expected": true
+      },
+      {
+        "section": "subjective",
+        "contains": "temperature is 37 C",
+        "expected": false
+      }
+    ]
+  },
+  {
+    "id": "case-12",
+    "category": "Section routing",
+    "title": "Pulse is 72 beats per minute",
+    "transcript": "Patient: I came for a routine visit.\nClinician: Vitals: pulse is 72 beats per minute.",
+    "checks": [
+      {
+        "section": "objective",
+        "contains": "pulse is 72 beats per minute",
+        "expected": true
+      },
+      {
+        "section": "subjective",
+        "contains": "pulse is 72 beats per minute",
+        "expected": false
+      }
+    ]
+  },
+  {
+    "id": "case-13",
+    "category": "Section routing",
+    "title": "Blood pressure is 118 over 76",
+    "transcript": "Patient: I came for a routine visit.\nClinician: Vitals: blood pressure is 118 over 76.",
+    "checks": [
+      {
+        "section": "objective",
+        "contains": "blood pressure is 118 over 76",
+        "expected": true
+      },
+      {
+        "section": "subjective",
+        "contains": "blood pressure is 118 over 76",
+        "expected": false
+      }
+    ]
+  },
+  {
+    "id": "case-14",
+    "category": "Section routing",
+    "title": "Respiratory rate is 14",
+    "transcript": "Patient: I came for a routine visit.\nClinician: Vitals: respiratory rate is 14.",
+    "checks": [
+      {
+        "section": "objective",
+        "contains": "respiratory rate is 14",
+        "expected": true
+      },
+      {
+        "section": "subjective",
+        "contains": "respiratory rate is 14",
+        "expected": false
+      }
+    ]
+  },
+  {
+    "id": "case-15",
+    "category": "Section routing",
+    "title": "Oxygen saturation is 98 percent",
+    "transcript": "Patient: I came for a routine visit.\nClinician: Vitals: oxygen saturation is 98 percent.",
+    "checks": [
+      {
+        "section": "objective",
+        "contains": "oxygen saturation is 98 percent",
+        "expected": true
+      },
+      {
+        "section": "subjective",
+        "contains": "oxygen saturation is 98 percent",
+        "expected": false
+      }
+    ]
+  },
+  {
+    "id": "case-16",
+    "category": "Missing evidence",
+    "title": "No examination \u2014 headache",
+    "transcript": "Clinician: What brings you in?\nPatient: I have headache.",
+    "checks": [
+      {
+        "section": "subjective",
+        "contains": "headache",
+        "expected": true
+      },
+      {
+        "section": "objective",
+        "empty": true
+      },
+      {
+        "section": "assessment",
+        "empty": true
+      },
+      {
+        "section": "plan",
+        "empty": true
+      }
+    ]
+  },
+  {
+    "id": "case-17",
+    "category": "Missing evidence",
+    "title": "No examination \u2014 cough",
+    "transcript": "Clinician: What brings you in?\nPatient: I have cough.",
+    "checks": [
+      {
+        "section": "subjective",
+        "contains": "cough",
+        "expected": true
+      },
+      {
+        "section": "objective",
+        "empty": true
+      },
+      {
+        "section": "assessment",
+        "empty": true
+      },
+      {
+        "section": "plan",
+        "empty": true
+      }
+    ]
+  },
+  {
+    "id": "case-18",
+    "category": "Missing evidence",
+    "title": "No examination \u2014 fatigue",
+    "transcript": "Clinician: What brings you in?\nPatient: I have fatigue.",
+    "checks": [
+      {
+        "section": "subjective",
+        "contains": "fatigue",
+        "expected": true
+      },
+      {
+        "section": "objective",
+        "empty": true
+      },
+      {
+        "section": "assessment",
+        "empty": true
+      },
+      {
+        "section": "plan",
+        "empty": true
+      }
+    ]
+  },
+  {
+    "id": "case-19",
+    "category": "Missing evidence",
+    "title": "No examination \u2014 itching",
+    "transcript": "Clinician: What brings you in?\nPatient: I have itching.",
+    "checks": [
+      {
+        "section": "subjective",
+        "contains": "itching",
+        "expected": true
+      },
+      {
+        "section": "objective",
+        "empty": true
+      },
+      {
+        "section": "assessment",
+        "empty": true
+      },
+      {
+        "section": "plan",
+        "empty": true
+      }
+    ]
+  },
+  {
+    "id": "case-20",
+    "category": "Missing evidence",
+    "title": "No examination \u2014 back discomfort",
+    "transcript": "Clinician: What brings you in?\nPatient: I have back discomfort.",
+    "checks": [
+      {
+        "section": "subjective",
+        "contains": "back discomfort",
+        "expected": true
+      },
+      {
+        "section": "objective",
+        "empty": true
+      },
+      {
+        "section": "assessment",
+        "empty": true
+      },
+      {
+        "section": "plan",
+        "empty": true
+      }
+    ]
+  },
+  {
+    "id": "case-21",
+    "category": "Corrections",
+    "title": "Duration corrected three to five",
+    "transcript": "Patient: The cough started three days ago.\nPatient: Correction: the cough started five days ago, not three.",
+    "checks": [
+      {
+        "section": "subjective",
+        "contains": "started five days ago",
+        "expected": true
+      },
+      {
+        "section": "subjective",
+        "contains": "started three days ago.",
+        "expected": false
+      }
+    ]
+  },
+  {
+    "id": "case-22",
+    "category": "Corrections",
+    "title": "Duration corrected two to four",
+    "transcript": "Patient: The cough started two days ago.\nPatient: Correction: the cough started four days ago, not two.",
+    "checks": [
+      {
+        "section": "subjective",
+        "contains": "started four days ago",
+        "expected": true
+      },
+      {
+        "section": "subjective",
+        "contains": "started two days ago.",
+        "expected": false
+      }
+    ]
+  },
+  {
+    "id": "case-23",
+    "category": "Corrections",
+    "title": "Duration corrected six to seven",
+    "transcript": "Patient: The cough started six days ago.\nPatient: Correction: the cough started seven days ago, not six.",
+    "checks": [
+      {
+        "section": "subjective",
+        "contains": "started seven days ago",
+        "expected": true
+      },
+      {
+        "section": "subjective",
+        "contains": "started six days ago.",
+        "expected": false
+      }
+    ]
+  },
+  {
+    "id": "case-24",
+    "category": "Corrections",
+    "title": "Duration corrected one to two",
+    "transcript": "Patient: The cough started one days ago.\nPatient: Correction: the cough started two days ago, not one.",
+    "checks": [
+      {
+        "section": "subjective",
+        "contains": "started two days ago",
+        "expected": true
+      },
+      {
+        "section": "subjective",
+        "contains": "started one days ago.",
+        "expected": false
+      }
+    ]
+  },
+  {
+    "id": "case-25",
+    "category": "Corrections",
+    "title": "Duration corrected four to eight",
+    "transcript": "Patient: The cough started four days ago.\nPatient: Correction: the cough started eight days ago, not four.",
+    "checks": [
+      {
+        "section": "subjective",
+        "contains": "started eight days ago",
+        "expected": true
+      },
+      {
+        "section": "subjective",
+        "contains": "started four days ago.",
+        "expected": false
+      }
+    ]
+  },
+  {
+    "id": "case-26",
+    "category": "Explicit plan",
+    "title": "Review the symptom diary at follow-up",
+    "transcript": "Patient: I understand.\nClinician: Plan: We will review the symptom diary at follow-up.",
+    "checks": [
+      {
+        "section": "plan",
+        "contains": "review the symptom diary at follow-up",
+        "expected": true
+      },
+      {
+        "section": "subjective",
+        "contains": "review the symptom diary at follow-up",
+        "expected": false
+      }
+    ]
+  },
+  {
+    "id": "case-27",
+    "category": "Explicit plan",
+    "title": "Discuss the test results at the next visit",
+    "transcript": "Patient: I understand.\nClinician: Plan: We will discuss the test results at the next visit.",
+    "checks": [
+      {
+        "section": "plan",
+        "contains": "discuss the test results at the next visit",
+        "expected": true
+      },
+      {
+        "section": "subjective",
+        "contains": "discuss the test results at the next visit",
+        "expected": false
+      }
+    ]
+  },
+  {
+    "id": "case-28",
+    "category": "Explicit plan",
+    "title": "Check the home readings at follow-up",
+    "transcript": "Patient: I understand.\nClinician: Plan: We will check the home readings at follow-up.",
+    "checks": [
+      {
+        "section": "plan",
+        "contains": "check the home readings at follow-up",
+        "expected": true
+      },
+      {
+        "section": "subjective",
+        "contains": "check the home readings at follow-up",
+        "expected": false
+      }
+    ]
+  },
+  {
+    "id": "case-29",
+    "category": "Explicit plan",
+    "title": "Review the medication list next visit",
+    "transcript": "Patient: I understand.\nClinician: Plan: We will review the medication list next visit.",
+    "checks": [
+      {
+        "section": "plan",
+        "contains": "review the medication list next visit",
+        "expected": true
+      },
+      {
+        "section": "subjective",
+        "contains": "review the medication list next visit",
+        "expected": false
+      }
+    ]
+  },
+  {
+    "id": "case-30",
+    "category": "Explicit plan",
+    "title": "Discuss the referral at follow-up",
+    "transcript": "Patient: I understand.\nClinician: Plan: We will discuss the referral at follow-up.",
+    "checks": [
+      {
+        "section": "plan",
+        "contains": "discuss the referral at follow-up",
+        "expected": true
+      },
+      {
+        "section": "subjective",
+        "contains": "discuss the referral at follow-up",
+        "expected": false
+      }
+    ]
+  }
+]
