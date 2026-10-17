@@ -68,3 +68,7 @@ Recorded demo results: baseline 10/30 cases; grounded 25/30, with five correctio
 See [SECURITY.md](SECURITY.md). Synthetic data only. No clinical validation, HIPAA compliance claim, multi-user access control, or encrypted database is provided. Do not expose this server to a network or enter actual patient data.
 
 Local Qwen3 regression run: 25/30 cases, 70/75 assertions passed. See evaluations/qwen3-local.json. This measures literal regression expectations, not clinical accuracy.
+
+## Evidence review
+
+[Evaluation and human-review workflow](docs/EVALUATION.md) provides claim-level annotations, omission tracking, exact-note hashes, and explicit incomplete-review reporting. Run `python -m evaluations.review --help`.

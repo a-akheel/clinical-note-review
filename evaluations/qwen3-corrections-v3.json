@@ -1,0 +1,1367 @@
+{
+  "id": "34053f12-4267-41fb-bde2-5b9fc3d5e996",
+  "created_at": "2026-10-16T16:32:37.543830+00:00",
+  "provider": "ollama",
+  "prompt_version": "corrections-v3",
+  "status": "completed",
+  "dataset_sha256": "57a1ce61dc0c5dbc0210a4af46afc2d85112ddeb9fe321595b9ce19d51b21b3a",
+  "total": 30,
+  "passed": 26,
+  "checks_passed": 71,
+  "checks_total": 75,
+  "results": [
+    {
+      "case_id": "case-01",
+      "title": "Denied fever",
+      "category": "Negation",
+      "passed": true,
+      "checks": [
+        {
+          "section": "subjective",
+          "contains": "not had fever",
+          "expected": true,
+          "passed": true
+        },
+        {
+          "section": "subjective",
+          "contains": "Have you had fever?",
+          "expected": false,
+          "passed": true
+        }
+      ],
+      "latency_ms": 5291.41,
+      "note": {
+        "subjective": [
+          {
+            "text": "I have not had fever.",
+            "source_turn_ids": [
+              "T2"
+            ]
+          }
+        ],
+        "objective": [],
+        "assessment": [],
+        "plan": []
+      },
+      "error": null,
+      "usage": {
+        "input_tokens": 298,
+        "output_tokens": 55
+      },
+      "estimated_cost_usd": null
+    },
+    {
+      "case_id": "case-02",
+      "title": "Denied chest pain",
+      "category": "Negation",
+      "passed": true,
+      "checks": [
+        {
+          "section": "subjective",
+          "contains": "not had chest pain",
+          "expected": true,
+          "passed": true
+        },
+        {
+          "section": "subjective",
+          "contains": "Have you had chest pain?",
+          "expected": false,
+          "passed": true
+        }
+      ],
+      "latency_ms": 2084.67,
+      "note": {
+        "subjective": [
+          {
+            "text": "I have not had chest pain.",
+            "source_turn_ids": [
+              "T2"
+            ]
+          }
+        ],
+        "objective": [],
+        "assessment": [],
+        "plan": []
+      },
+      "error": null,
+      "usage": {
+        "input_tokens": 300,
+        "output_tokens": 56
+      },
+      "estimated_cost_usd": null
+    },
+    {
+      "case_id": "case-03",
+      "title": "Denied nausea",
+      "category": "Negation",
+      "passed": true,
+      "checks": [
+        {
+          "section": "subjective",
+          "contains": "not had nausea",
+          "expected": true,
+          "passed": true
+        },
+        {
+          "section": "subjective",
+          "contains": "Have you had nausea?",
+          "expected": false,
+          "passed": true
+        }
+      ],
+      "latency_ms": 2002.2,
+      "note": {
+        "subjective": [
+          {
+            "text": "I have not had nausea.",
+            "source_turn_ids": [
+              "T2"
+            ]
+          }
+        ],
+        "objective": [],
+        "assessment": [],
+        "plan": []
+      },
+      "error": null,
+      "usage": {
+        "input_tokens": 298,
+        "output_tokens": 55
+      },
+      "estimated_cost_usd": null
+    },
+    {
+      "case_id": "case-04",
+      "title": "Denied dizziness",
+      "category": "Negation",
+      "passed": true,
+      "checks": [
+        {
+          "section": "subjective",
+          "contains": "not had dizziness",
+          "expected": true,
+          "passed": true
+        },
+        {
+          "section": "subjective",
+          "contains": "Have you had dizziness?",
+          "expected": false,
+          "passed": true
+        }
+      ],
+      "latency_ms": 2017.41,
+      "note": {
+        "subjective": [
+          {
+            "text": "I have not had dizziness.",
+            "source_turn_ids": [
+              "T2"
+            ]
+          }
+        ],
+        "objective": [],
+        "assessment": [],
+        "plan": []
+      },
+      "error": null,
+      "usage": {
+        "input_tokens": 300,
+        "output_tokens": 56
+      },
+      "estimated_cost_usd": null
+    },
+    {
+      "case_id": "case-05",
+      "title": "Denied shortness of breath",
+      "category": "Negation",
+      "passed": true,
+      "checks": [
+        {
+          "section": "subjective",
+          "contains": "not had shortness of breath",
+          "expected": true,
+          "passed": true
+        },
+        {
+          "section": "subjective",
+          "contains": "Have you had shortness of breath?",
+          "expected": false,
+          "passed": true
+        }
+      ],
+      "latency_ms": 2057.78,
+      "note": {
+        "subjective": [
+          {
+            "text": "I have not had shortness of breath.",
+            "source_turn_ids": [
+              "T2"
+            ]
+          }
+        ],
+        "objective": [],
+        "assessment": [],
+        "plan": []
+      },
+      "error": null,
+      "usage": {
+        "input_tokens": 304,
+        "output_tokens": 58
+      },
+      "estimated_cost_usd": null
+    },
+    {
+      "case_id": "case-06",
+      "title": "Mother history",
+      "category": "Attribution",
+      "passed": false,
+      "checks": [
+        {
+          "section": "subjective",
+          "contains": "My mother has asthma",
+          "expected": true,
+          "passed": true
+        },
+        {
+          "section": "subjective",
+          "contains": "I do not have that diagnosis",
+          "expected": true,
+          "passed": false
+        },
+        {
+          "section": "assessment",
+          "contains": "asthma",
+          "expected": false,
+          "passed": true
+        }
+      ],
+      "latency_ms": 1976.07,
+      "note": {
+        "subjective": [
+          {
+            "text": "My mother has asthma.",
+            "source_turn_ids": [
+              "T2"
+            ]
+          }
+        ],
+        "objective": [],
+        "assessment": [],
+        "plan": []
+      },
+      "error": null,
+      "usage": {
+        "input_tokens": 306,
+        "output_tokens": 54
+      },
+      "estimated_cost_usd": null
+    },
+    {
+      "case_id": "case-07",
+      "title": "Father history",
+      "category": "Attribution",
+      "passed": false,
+      "checks": [
+        {
+          "section": "subjective",
+          "contains": "My father has diabetes",
+          "expected": true,
+          "passed": true
+        },
+        {
+          "section": "subjective",
+          "contains": "I do not have that diagnosis",
+          "expected": true,
+          "passed": false
+        },
+        {
+          "section": "assessment",
+          "contains": "diabetes",
+          "expected": false,
+          "passed": true
+        }
+      ],
+      "latency_ms": 1909.55,
+      "note": {
+        "subjective": [
+          {
+            "text": "My father has diabetes.",
+            "source_turn_ids": [
+              "T2"
+            ]
+          }
+        ],
+        "objective": [],
+        "assessment": [],
+        "plan": []
+      },
+      "error": null,
+      "usage": {
+        "input_tokens": 306,
+        "output_tokens": 54
+      },
+      "estimated_cost_usd": null
+    },
+    {
+      "case_id": "case-08",
+      "title": "Sister history",
+      "category": "Attribution",
+      "passed": true,
+      "checks": [
+        {
+          "section": "subjective",
+          "contains": "My sister has migraine",
+          "expected": true,
+          "passed": true
+        },
+        {
+          "section": "subjective",
+          "contains": "I do not have that diagnosis",
+          "expected": true,
+          "passed": true
+        },
+        {
+          "section": "assessment",
+          "contains": "migraine",
+          "expected": false,
+          "passed": true
+        }
+      ],
+      "latency_ms": 2832.8,
+      "note": {
+        "subjective": [
+          {
+            "text": "My sister has migraine.",
+            "source_turn_ids": [
+              "T2"
+            ]
+          },
+          {
+            "text": "I do not have that diagnosis.",
+            "source_turn_ids": [
+              "T2"
+            ]
+          }
+        ],
+        "objective": [],
+        "assessment": [],
+        "plan": []
+      },
+      "error": null,
+      "usage": {
+        "input_tokens": 306,
+        "output_tokens": 84
+      },
+      "estimated_cost_usd": null
+    },
+    {
+      "case_id": "case-09",
+      "title": "Brother history",
+      "category": "Attribution",
+      "passed": false,
+      "checks": [
+        {
+          "section": "subjective",
+          "contains": "My brother has eczema",
+          "expected": true,
+          "passed": true
+        },
+        {
+          "section": "subjective",
+          "contains": "I do not have that diagnosis",
+          "expected": true,
+          "passed": false
+        },
+        {
+          "section": "assessment",
+          "contains": "eczema",
+          "expected": false,
+          "passed": true
+        }
+      ],
+      "latency_ms": 1806.72,
+      "note": {
+        "subjective": [
+          {
+            "text": "My brother has eczema.",
+            "source_turn_ids": [
+              "T2"
+            ]
+          }
+        ],
+        "objective": [],
+        "assessment": [],
+        "plan": []
+      },
+      "error": null,
+      "usage": {
+        "input_tokens": 308,
+        "output_tokens": 52
+      },
+      "estimated_cost_usd": null
+    },
+    {
+      "case_id": "case-10",
+      "title": "Grandmother history",
+      "category": "Attribution",
+      "passed": false,
+      "checks": [
+        {
+          "section": "subjective",
+          "contains": "My grandmother has arthritis",
+          "expected": true,
+          "passed": true
+        },
+        {
+          "section": "subjective",
+          "contains": "I do not have that diagnosis",
+          "expected": true,
+          "passed": false
+        },
+        {
+          "section": "assessment",
+          "contains": "arthritis",
+          "expected": false,
+          "passed": true
+        }
+      ],
+      "latency_ms": 1870.59,
+      "note": {
+        "subjective": [
+          {
+            "text": "My grandmother has arthritis.",
+            "source_turn_ids": [
+              "T2"
+            ]
+          }
+        ],
+        "objective": [],
+        "assessment": [],
+        "plan": []
+      },
+      "error": null,
+      "usage": {
+        "input_tokens": 306,
+        "output_tokens": 54
+      },
+      "estimated_cost_usd": null
+    },
+    {
+      "case_id": "case-11",
+      "title": "Temperature is 37 c",
+      "category": "Section routing",
+      "passed": true,
+      "checks": [
+        {
+          "section": "objective",
+          "contains": "temperature is 37 C",
+          "expected": true,
+          "passed": true
+        },
+        {
+          "section": "subjective",
+          "contains": "temperature is 37 C",
+          "expected": false,
+          "passed": true
+        }
+      ],
+      "latency_ms": 2993.4,
+      "note": {
+        "subjective": [
+          {
+            "text": "I came for a routine visit.",
+            "source_turn_ids": [
+              "T1"
+            ]
+          }
+        ],
+        "objective": [
+          {
+            "text": "temperature is 37 C",
+            "source_turn_ids": [
+              "T2"
+            ]
+          }
+        ],
+        "assessment": [],
+        "plan": []
+      },
+      "error": null,
+      "usage": {
+        "input_tokens": 304,
+        "output_tokens": 88
+      },
+      "estimated_cost_usd": null
+    },
+    {
+      "case_id": "case-12",
+      "title": "Pulse is 72 beats per minute",
+      "category": "Section routing",
+      "passed": true,
+      "checks": [
+        {
+          "section": "objective",
+          "contains": "pulse is 72 beats per minute",
+          "expected": true,
+          "passed": true
+        },
+        {
+          "section": "subjective",
+          "contains": "pulse is 72 beats per minute",
+          "expected": false,
+          "passed": true
+        }
+      ],
+      "latency_ms": 3019.0,
+      "note": {
+        "subjective": [
+          {
+            "text": "I came for a routine visit.",
+            "source_turn_ids": [
+              "T1"
+            ]
+          }
+        ],
+        "objective": [
+          {
+            "text": "pulse is 72 beats per minute",
+            "source_turn_ids": [
+              "T2"
+            ]
+          }
+        ],
+        "assessment": [],
+        "plan": []
+      },
+      "error": null,
+      "usage": {
+        "input_tokens": 306,
+        "output_tokens": 90
+      },
+      "estimated_cost_usd": null
+    },
+    {
+      "case_id": "case-13",
+      "title": "Blood pressure is 118 over 76",
+      "category": "Section routing",
+      "passed": true,
+      "checks": [
+        {
+          "section": "objective",
+          "contains": "blood pressure is 118 over 76",
+          "expected": true,
+          "passed": true
+        },
+        {
+          "section": "subjective",
+          "contains": "blood pressure is 118 over 76",
+          "expected": false,
+          "passed": true
+        }
+      ],
+      "latency_ms": 3186.88,
+      "note": {
+        "subjective": [
+          {
+            "text": "I came for a routine visit.",
+            "source_turn_ids": [
+              "T1"
+            ]
+          }
+        ],
+        "objective": [
+          {
+            "text": "blood pressure is 118 over 76",
+            "source_turn_ids": [
+              "T2"
+            ]
+          }
+        ],
+        "assessment": [],
+        "plan": []
+      },
+      "error": null,
+      "usage": {
+        "input_tokens": 309,
+        "output_tokens": 93
+      },
+      "estimated_cost_usd": null
+    },
+    {
+      "case_id": "case-14",
+      "title": "Respiratory rate is 14",
+      "category": "Section routing",
+      "passed": true,
+      "checks": [
+        {
+          "section": "objective",
+          "contains": "respiratory rate is 14",
+          "expected": true,
+          "passed": true
+        },
+        {
+          "section": "subjective",
+          "contains": "respiratory rate is 14",
+          "expected": false,
+          "passed": true
+        }
+      ],
+      "latency_ms": 2961.63,
+      "note": {
+        "subjective": [
+          {
+            "text": "I came for a routine visit.",
+            "source_turn_ids": [
+              "T1"
+            ]
+          }
+        ],
+        "objective": [
+          {
+            "text": "respiratory rate is 14",
+            "source_turn_ids": [
+              "T2"
+            ]
+          }
+        ],
+        "assessment": [],
+        "plan": []
+      },
+      "error": null,
+      "usage": {
+        "input_tokens": 304,
+        "output_tokens": 90
+      },
+      "estimated_cost_usd": null
+    },
+    {
+      "case_id": "case-15",
+      "title": "Oxygen saturation is 98 percent",
+      "category": "Section routing",
+      "passed": true,
+      "checks": [
+        {
+          "section": "objective",
+          "contains": "oxygen saturation is 98 percent",
+          "expected": true,
+          "passed": true
+        },
+        {
+          "section": "subjective",
+          "contains": "oxygen saturation is 98 percent",
+          "expected": false,
+          "passed": true
+        }
+      ],
+      "latency_ms": 2997.09,
+      "note": {
+        "subjective": [
+          {
+            "text": "I came for a routine visit.",
+            "source_turn_ids": [
+              "T1"
+            ]
+          }
+        ],
+        "objective": [
+          {
+            "text": "oxygen saturation is 98 percent",
+            "source_turn_ids": [
+              "T2"
+            ]
+          }
+        ],
+        "assessment": [],
+        "plan": []
+      },
+      "error": null,
+      "usage": {
+        "input_tokens": 305,
+        "output_tokens": 90
+      },
+      "estimated_cost_usd": null
+    },
+    {
+      "case_id": "case-16",
+      "title": "No examination \u2014 headache",
+      "category": "Missing evidence",
+      "passed": true,
+      "checks": [
+        {
+          "section": "subjective",
+          "contains": "headache",
+          "expected": true,
+          "passed": true
+        },
+        {
+          "section": "objective",
+          "empty": true,
+          "passed": true
+        },
+        {
+          "section": "assessment",
+          "empty": true,
+          "passed": true
+        },
+        {
+          "section": "plan",
+          "empty": true,
+          "passed": true
+        }
+      ],
+      "latency_ms": 1893.27,
+      "note": {
+        "subjective": [
+          {
+            "text": "headache",
+            "source_turn_ids": [
+              "T2"
+            ]
+          }
+        ],
+        "objective": [],
+        "assessment": [],
+        "plan": []
+      },
+      "error": null,
+      "usage": {
+        "input_tokens": 296,
+        "output_tokens": 52
+      },
+      "estimated_cost_usd": null
+    },
+    {
+      "case_id": "case-17",
+      "title": "No examination \u2014 cough",
+      "category": "Missing evidence",
+      "passed": true,
+      "checks": [
+        {
+          "section": "subjective",
+          "contains": "cough",
+          "expected": true,
+          "passed": true
+        },
+        {
+          "section": "objective",
+          "empty": true,
+          "passed": true
+        },
+        {
+          "section": "assessment",
+          "empty": true,
+          "passed": true
+        },
+        {
+          "section": "plan",
+          "empty": true,
+          "passed": true
+        }
+      ],
+      "latency_ms": 1767.07,
+      "note": {
+        "subjective": [
+          {
+            "text": "cough",
+            "source_turn_ids": [
+              "T2"
+            ]
+          }
+        ],
+        "objective": [],
+        "assessment": [],
+        "plan": []
+      },
+      "error": null,
+      "usage": {
+        "input_tokens": 296,
+        "output_tokens": 52
+      },
+      "estimated_cost_usd": null
+    },
+    {
+      "case_id": "case-18",
+      "title": "No examination \u2014 fatigue",
+      "category": "Missing evidence",
+      "passed": true,
+      "checks": [
+        {
+          "section": "subjective",
+          "contains": "fatigue",
+          "expected": true,
+          "passed": true
+        },
+        {
+          "section": "objective",
+          "empty": true,
+          "passed": true
+        },
+        {
+          "section": "assessment",
+          "empty": true,
+          "passed": true
+        },
+        {
+          "section": "plan",
+          "empty": true,
+          "passed": true
+        }
+      ],
+      "latency_ms": 1745.76,
+      "note": {
+        "subjective": [
+          {
+            "text": "fatigue",
+            "source_turn_ids": [
+              "T2"
+            ]
+          }
+        ],
+        "objective": [],
+        "assessment": [],
+        "plan": []
+      },
+      "error": null,
+      "usage": {
+        "input_tokens": 296,
+        "output_tokens": 52
+      },
+      "estimated_cost_usd": null
+    },
+    {
+      "case_id": "case-19",
+      "title": "No examination \u2014 itching",
+      "category": "Missing evidence",
+      "passed": true,
+      "checks": [
+        {
+          "section": "subjective",
+          "contains": "itching",
+          "expected": true,
+          "passed": true
+        },
+        {
+          "section": "objective",
+          "empty": true,
+          "passed": true
+        },
+        {
+          "section": "assessment",
+          "empty": true,
+          "passed": true
+        },
+        {
+          "section": "plan",
+          "empty": true,
+          "passed": true
+        }
+      ],
+      "latency_ms": 1759.51,
+      "note": {
+        "subjective": [
+          {
+            "text": "itching",
+            "source_turn_ids": [
+              "T2"
+            ]
+          }
+        ],
+        "objective": [],
+        "assessment": [],
+        "plan": []
+      },
+      "error": null,
+      "usage": {
+        "input_tokens": 296,
+        "output_tokens": 52
+      },
+      "estimated_cost_usd": null
+    },
+    {
+      "case_id": "case-20",
+      "title": "No examination \u2014 back discomfort",
+      "category": "Missing evidence",
+      "passed": true,
+      "checks": [
+        {
+          "section": "subjective",
+          "contains": "back discomfort",
+          "expected": true,
+          "passed": true
+        },
+        {
+          "section": "objective",
+          "empty": true,
+          "passed": true
+        },
+        {
+          "section": "assessment",
+          "empty": true,
+          "passed": true
+        },
+        {
+          "section": "plan",
+          "empty": true,
+          "passed": true
+        }
+      ],
+      "latency_ms": 1764.3,
+      "note": {
+        "subjective": [
+          {
+            "text": "back discomfort",
+            "source_turn_ids": [
+              "T2"
+            ]
+          }
+        ],
+        "objective": [],
+        "assessment": [],
+        "plan": []
+      },
+      "error": null,
+      "usage": {
+        "input_tokens": 297,
+        "output_tokens": 52
+      },
+      "estimated_cost_usd": null
+    },
+    {
+      "case_id": "case-21",
+      "title": "Duration corrected three to five",
+      "category": "Corrections",
+      "passed": true,
+      "checks": [
+        {
+          "section": "subjective",
+          "contains": "started five days ago",
+          "expected": true,
+          "passed": true
+        },
+        {
+          "section": "subjective",
+          "contains": "started three days ago.",
+          "expected": false,
+          "passed": true
+        }
+      ],
+      "latency_ms": 2017.3,
+      "note": {
+        "subjective": [
+          {
+            "text": "The cough started five days ago",
+            "source_turn_ids": [
+              "T2"
+            ]
+          }
+        ],
+        "objective": [],
+        "assessment": [],
+        "plan": []
+      },
+      "error": null,
+      "usage": {
+        "input_tokens": 305,
+        "output_tokens": 56
+      },
+      "estimated_cost_usd": null
+    },
+    {
+      "case_id": "case-22",
+      "title": "Duration corrected two to four",
+      "category": "Corrections",
+      "passed": true,
+      "checks": [
+        {
+          "section": "subjective",
+          "contains": "started four days ago",
+          "expected": true,
+          "passed": true
+        },
+        {
+          "section": "subjective",
+          "contains": "started two days ago.",
+          "expected": false,
+          "passed": true
+        }
+      ],
+      "latency_ms": 2019.55,
+      "note": {
+        "subjective": [
+          {
+            "text": "The cough started four days ago.",
+            "source_turn_ids": [
+              "T2"
+            ]
+          }
+        ],
+        "objective": [],
+        "assessment": [],
+        "plan": []
+      },
+      "error": null,
+      "usage": {
+        "input_tokens": 305,
+        "output_tokens": 56
+      },
+      "estimated_cost_usd": null
+    },
+    {
+      "case_id": "case-23",
+      "title": "Duration corrected six to seven",
+      "category": "Corrections",
+      "passed": true,
+      "checks": [
+        {
+          "section": "subjective",
+          "contains": "started seven days ago",
+          "expected": true,
+          "passed": true
+        },
+        {
+          "section": "subjective",
+          "contains": "started six days ago.",
+          "expected": false,
+          "passed": true
+        }
+      ],
+      "latency_ms": 2025.4,
+      "note": {
+        "subjective": [
+          {
+            "text": "The cough started seven days ago.",
+            "source_turn_ids": [
+              "T2"
+            ]
+          }
+        ],
+        "objective": [],
+        "assessment": [],
+        "plan": []
+      },
+      "error": null,
+      "usage": {
+        "input_tokens": 305,
+        "output_tokens": 56
+      },
+      "estimated_cost_usd": null
+    },
+    {
+      "case_id": "case-24",
+      "title": "Duration corrected one to two",
+      "category": "Corrections",
+      "passed": true,
+      "checks": [
+        {
+          "section": "subjective",
+          "contains": "started two days ago",
+          "expected": true,
+          "passed": true
+        },
+        {
+          "section": "subjective",
+          "contains": "started one days ago.",
+          "expected": false,
+          "passed": true
+        }
+      ],
+      "latency_ms": 2017.0,
+      "note": {
+        "subjective": [
+          {
+            "text": "The cough started two days ago",
+            "source_turn_ids": [
+              "T2"
+            ]
+          }
+        ],
+        "objective": [],
+        "assessment": [],
+        "plan": []
+      },
+      "error": null,
+      "usage": {
+        "input_tokens": 305,
+        "output_tokens": 56
+      },
+      "estimated_cost_usd": null
+    },
+    {
+      "case_id": "case-25",
+      "title": "Duration corrected four to eight",
+      "category": "Corrections",
+      "passed": true,
+      "checks": [
+        {
+          "section": "subjective",
+          "contains": "started eight days ago",
+          "expected": true,
+          "passed": true
+        },
+        {
+          "section": "subjective",
+          "contains": "started four days ago.",
+          "expected": false,
+          "passed": true
+        }
+      ],
+      "latency_ms": 2025.22,
+      "note": {
+        "subjective": [
+          {
+            "text": "The cough started eight days ago.",
+            "source_turn_ids": [
+              "T2"
+            ]
+          }
+        ],
+        "objective": [],
+        "assessment": [],
+        "plan": []
+      },
+      "error": null,
+      "usage": {
+        "input_tokens": 305,
+        "output_tokens": 56
+      },
+      "estimated_cost_usd": null
+    },
+    {
+      "case_id": "case-26",
+      "title": "Review the symptom diary at follow-up",
+      "category": "Explicit plan",
+      "passed": true,
+      "checks": [
+        {
+          "section": "plan",
+          "contains": "review the symptom diary at follow-up",
+          "expected": true,
+          "passed": true
+        },
+        {
+          "section": "subjective",
+          "contains": "review the symptom diary at follow-up",
+          "expected": false,
+          "passed": true
+        }
+      ],
+      "latency_ms": 2985.83,
+      "note": {
+        "subjective": [
+          {
+            "text": "I understand.",
+            "source_turn_ids": [
+              "T1"
+            ]
+          }
+        ],
+        "objective": [],
+        "assessment": [],
+        "plan": [
+          {
+            "text": "We will review the symptom diary at follow-up.",
+            "source_turn_ids": [
+              "T2"
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "usage": {
+        "input_tokens": 302,
+        "output_tokens": 87
+      },
+      "estimated_cost_usd": null
+    },
+    {
+      "case_id": "case-27",
+      "title": "Discuss the test results at the next visit",
+      "category": "Explicit plan",
+      "passed": true,
+      "checks": [
+        {
+          "section": "plan",
+          "contains": "discuss the test results at the next visit",
+          "expected": true,
+          "passed": true
+        },
+        {
+          "section": "subjective",
+          "contains": "discuss the test results at the next visit",
+          "expected": false,
+          "passed": true
+        }
+      ],
+      "latency_ms": 2943.95,
+      "note": {
+        "subjective": [
+          {
+            "text": "I understand.",
+            "source_turn_ids": [
+              "T1"
+            ]
+          }
+        ],
+        "objective": [],
+        "assessment": [],
+        "plan": [
+          {
+            "text": "We will discuss the test results at the next visit.",
+            "source_turn_ids": [
+              "T2"
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "usage": {
+        "input_tokens": 303,
+        "output_tokens": 88
+      },
+      "estimated_cost_usd": null
+    },
+    {
+      "case_id": "case-28",
+      "title": "Check the home readings at follow-up",
+      "category": "Explicit plan",
+      "passed": true,
+      "checks": [
+        {
+          "section": "plan",
+          "contains": "check the home readings at follow-up",
+          "expected": true,
+          "passed": true
+        },
+        {
+          "section": "subjective",
+          "contains": "check the home readings at follow-up",
+          "expected": false,
+          "passed": true
+        }
+      ],
+      "latency_ms": 3023.06,
+      "note": {
+        "subjective": [
+          {
+            "text": "I understand.",
+            "source_turn_ids": [
+              "T1"
+            ]
+          }
+        ],
+        "objective": [],
+        "assessment": [],
+        "plan": [
+          {
+            "text": "We will check the home readings at follow-up.",
+            "source_turn_ids": [
+              "T2"
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "usage": {
+        "input_tokens": 302,
+        "output_tokens": 87
+      },
+      "estimated_cost_usd": null
+    },
+    {
+      "case_id": "case-29",
+      "title": "Review the medication list next visit",
+      "category": "Explicit plan",
+      "passed": true,
+      "checks": [
+        {
+          "section": "plan",
+          "contains": "review the medication list next visit",
+          "expected": true,
+          "passed": true
+        },
+        {
+          "section": "subjective",
+          "contains": "review the medication list next visit",
+          "expected": false,
+          "passed": true
+        }
+      ],
+      "latency_ms": 3078.92,
+      "note": {
+        "subjective": [
+          {
+            "text": "I understand.",
+            "source_turn_ids": [
+              "T1"
+            ]
+          }
+        ],
+        "objective": [],
+        "assessment": [],
+        "plan": [
+          {
+            "text": "We will review the medication list next visit.",
+            "source_turn_ids": [
+              "T2"
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "usage": {
+        "input_tokens": 301,
+        "output_tokens": 86
+      },
+      "estimated_cost_usd": null
+    },
+    {
+      "case_id": "case-30",
+      "title": "Discuss the referral at follow-up",
+      "category": "Explicit plan",
+      "passed": true,
+      "checks": [
+        {
+          "section": "plan",
+          "contains": "discuss the referral at follow-up",
+          "expected": true,
+          "passed": true
+        },
+        {
+          "section": "subjective",
+          "contains": "discuss the referral at follow-up",
+          "expected": false,
+          "passed": true
+        }
+      ],
+      "latency_ms": 2813.95,
+      "note": {
+        "subjective": [
+          {
+            "text": "I understand.",
+            "source_turn_ids": [
+              "T1"
+            ]
+          }
+        ],
+        "objective": [],
+        "assessment": [],
+        "plan": [
+          {
+            "text": "We will discuss the referral at follow-up.",
+            "source_turn_ids": [
+              "T2"
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "usage": {
+        "input_tokens": 301,
+        "output_tokens": 86
+      },
+      "estimated_cost_usd": null
+    }
+  ],
+  "semantic_review": "not performed",
+  "method": "Semantic meaning is not graded: substring and section assertions only. This is a regression score, not clinical accuracy."
+}
